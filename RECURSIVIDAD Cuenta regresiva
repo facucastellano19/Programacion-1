@@ -1,0 +1,24 @@
+package demo_recursividad4;
+
+/**
+ *
+ * @author eduardo.perez
+ */
+public class regresiva {
+
+    public void cuentaRegresiva(int numero) {
+        numero--;
+        if (numero > 0) {
+            System.out.println(numero);
+            //Llamar la misma función
+            cuentaRegresiva(numero);
+        } else {
+            System.out.println("LLego hasta 0");
+        }
+    }
+
+}
+
+
+// El método cuentaRegresiva imprime una cuenta regresiva desde un número dado hasta 0 usando recursividad. En cada llamada, decrementa el número y lo imprime, llamando
+// nuevamente a la función hasta llegar a 0, momento en el que imprime "Llegó hasta 0".
