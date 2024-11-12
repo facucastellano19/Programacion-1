@@ -3,6 +3,16 @@ package ej205;
 import java.util.Scanner;
 
 
+//205 - Realizar un programa en lenguaje java que contenga una clase, aparte de la principal, que 
+//implemente un pedido de entrada de texto desde consola. Las entradas de texto pedidas corresponden
+//a un nombre, una edad, y un domicilio, que consta de calle y altura en dos campos separados. 
+//Implementar un método que verifique las entradas numéricas de edad y altura, intentando convertir a 
+//número Integer lo ingresado. Cuando los cuatro datos ingresados estén correctos en formato, imprimir 
+//en pantalla lo ingresado. Si lo ingresado tiene formato incorrecto, no se deberá cerrar el programa, 
+//sino avisar al usuario, y volver a pedir el dato. Como opcional, implementar que si se ingresa asterisco 
+//en cualquier campo, se salga de la aplicación. Usar manejo de excepciones para verificar el formato de
+//los campos tipo número a ingresar.
+
 public class Menu {
 
     private String nombre;
