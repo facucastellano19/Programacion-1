@@ -1,0 +1,93 @@
+E302.- Se necesita cruzar la información de dos archivos, que contienen la plantilla de un equipo de futbol, conteniendo cada archivo los jugadores de un año específico. Se desea saber que jugadores fueron parte en los dos años, es decir,
+los jugadores que figuran en los dos archivos. Los datos en los archivos están ordenados por número de camiseta, sin omisiones ni faltantes. Los archivos son:boca_2011.txtboca_2012.txt
+
+package e302;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class Proceso {
+
+    public void lectura() {
+        
+        // Objetos de lectura y variables
+        String nombre_boca1 = "C:/temporal/boca_2011.txt";
+        String nombre_boca2 = "C:/temporal/boca_2012.txt";
+        
+        FileReader origen = null;
+
+        ArrayList <String> entrada_2011 = new ArrayList();
+        ArrayList <String> entrada_2012 = new ArrayList();        
+        ArrayList <String> salida = new ArrayList(); 
+        
+        // Leer los dos archivos a sendos ArrayList
+        try {
+            origen = new FileReader(nombre_boca1);
+            Scanner scan = new Scanner(origen);
+            String line;
+            
+            while (scan.hasNext()) {
+                line = scan.nextLine();
+                entrada_2011.add(line);
+                        
+            }     
+            
+            File origen2 = new File (nombre_boca2);
+            Scanner scan2 = new Scanner (origen2);
+            String line2;;
+            while (scan2.hasNext()) {
+                line2 = scan2.nextLine();
+                entrada_2012.add(line2);
+                        
+            }                   
+      
+        }
+        catch (Exception e) {
+                e.printStackTrace();
+        }        
+        
+        // Recorrer ambos ArrayList, comparando lineas
+        // Guardar lineas iguales en ArrayList de salida
+        
+        
+        // 1ERA FORMA MAS LARGA para recorrer y comparar 
+        
+        Integer largo = entrada_2011.size();
+        for (int i = 0; i < largo; i++) {
+            String linea1 = entrada_2011.get(i);
+            String linea2 = entrada_2012.get(i);
+            
+            if (linea1.equalsIgnoreCase(linea2)) {
+                salida.add(linea1);
+            }
+            
+        }        
+        
+        
+        
+        // 2DA FORMA CON UN FOR EACH
+        for (String elem : entrada_2011) {
+            if (entrada_2012.contains(elem)) {
+                salida.add(elem);
+            }
+        }
+        
+        
+        // Mostrar la salida
+        System.out.println("Jugadores repetidos: ");
+        // System.out.println(salida);
+        
+        for ( String sal : salida){
+            System.out.println(sal);
+        }
+        
+    }
+    
+    
+    
+}
+  
