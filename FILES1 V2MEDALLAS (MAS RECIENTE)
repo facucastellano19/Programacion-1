@@ -1,0 +1,65 @@
+package practicaarchivos;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Menu {
+
+    public void Proceso() {
+
+        // Definimos ruta
+        String rutaArchivo = "c/temporal/medallas_2024.dat";
+
+        // Creamos un archivo con la ruta del archivo
+        File archivoMedallas = new File(rutaArchivo);
+
+        // ArrayLists para guardar la informacion
+        ArrayList<String> lineasArchivo = new ArrayList();
+
+        try {
+            Scanner sc = new Scanner(archivoMedallas);
+
+            // Mientras tenga una linea siguiente
+            while (sc.hasNext()) {
+                String linea = sc.nextLine();
+                lineasArchivo.add(linea);
+            }
+
+            File salidaArchivoOro = new File("c:/temporal/salidaOro");
+            File salidaArchivoPlata = new File("c:/temporal/salidaPlata");
+            File salidaArchivoBronce = new File("c:/temporal/salidaBronce");
+
+            PrintWriter archivoOro = new PrintWriter(salidaArchivoOro);
+            PrintWriter archivoPlata = new PrintWriter(salidaArchivoPlata);
+            PrintWriter archivoBronce = new PrintWriter(salidaArchivoBronce);
+
+            for (String unalinea : lineasArchivo) {
+                if (unalinea.contains("Oro")) {
+                    archivoOro.println(unalinea);
+                } else if (unalinea.contains("Plata")) {
+                    archivoPlata.println();
+                } else if (unalinea.contains("Bronce")) {
+                    archivoBronce.println();
+                }
+            }
+
+            archivoOro.flush();
+            archivoPlata.flush();
+            archivoBronce.flush();
+
+            archivoOro.close();
+            archivoPlata.close();
+            archivoBronce.close();
+            
+            sc.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+}
