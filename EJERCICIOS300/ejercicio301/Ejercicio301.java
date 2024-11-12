@@ -1,4 +1,3 @@
-// Luca Ferrante
 package ejercicio301;
 
 public class Ejercicio301 {
