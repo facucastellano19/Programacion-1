@@ -25,3 +25,20 @@ public class factorial {
     }
 
 }
+
+
+
+
+
+
+
+Si n es 0, devuelve 1 (porque 
+0!=1
+
+Explicacion del metodo recursivo factorial
+
+Si n es mayor que 0, multiplica n por el factorial de n-1.
+La función se sigue llamando hasta llegar a n = 0.
+Ejemplo para fact_recursivo(5):
+5!=5×4×3×2×1=120.
+El método multiplica en forma descendente hasta llegar a 0, momento en el que retorna 1 y empieza a resolver las multiplicaciones hacia atrás.
