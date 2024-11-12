@@ -1,7 +1,15 @@
 
 package ej201;
 
-
+//201 – Realizar una implementación en lenguaje java de un TAD (clase Java) que represente el 
+//CUIT/CUIL usado en Argentina. Internamente debe guardarse el dato en una variable de tipo String. 
+//También implementar los siguientes métodos:
+//-Metodos get y set de la variable interna
+//-Un método que devuelva el CUIT formateado de esta forma: AA-BBBBBBBB-C
+//-Un método que verifique la cantidad de 11 dígitos de largo.
+//Realizar un código de ejemplo, que pida los dígitos de un CUIT, e imprima el mismo formateado en 
+//consola, usando el formateo la clase anterior construida.
+    
 public class CuitCuil {
     
     private String cuit;
