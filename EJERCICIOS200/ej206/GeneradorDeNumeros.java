@@ -4,6 +4,11 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
+//206 - Realizar un programa que genere un ArrayList con 25 elementos, y cada elemento será un 
+//número aleatorios entre 1 y 1000. Luego recorrer el ArrayList, y escribir los 25 elementos a un archivo 
+//de texto, un elemento por linea. Antes de salir del programa, informar el nombre y ruta del archivo 
+//donde se escribió la información.
+    
 public class GeneradorDeNumeros {
 
     public void generarYEscribir() {
