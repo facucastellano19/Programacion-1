@@ -1,7 +1,11 @@
-// Luca Ferrante
+
 package ejercicio303;
 import java.util.Scanner;
 import java.util.InputMismatchException;
+
+//303 – Realizar un programa en lenguaje java para imprimir en base a un número ingresado de 1 a 7, el
+//nombre del día de la semana correspondiente, siendo domingo el numero 1. Usar una estructura Enum
+//para guardar la información y recuperarla.
 
 public class Ejercicio {
     Scanner entrada = new Scanner(System.in);
