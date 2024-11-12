@@ -1,0 +1,48 @@
+Consigna: Resolver los siguientes ejercicios, usando el lenguaje java de programación. Por 
+cada ejercicio crear una clase nueva (diferente de la que contiene el método main), y agregar 
+a la misma el o los métodos necesarios para implementar la solución.
+
+201 – Realizar una implementación en lenguaje java de un TAD (clase Java) que represente el 
+CUIT/CUIL usado en Argentina. Internamente debe guardarse el dato en una variable de tipo String. 
+También implementar los siguientes métodos:
+-Metodos get y set de la variable interna
+-Un método que devuelva el CUIT formateado de esta forma: AA-BBBBBBBB-C
+-Un método que verifique la cantidad de 11 dígitos de largo.
+Realizar un código de ejemplo, que pida los dígitos de un CUIT, e imprima el mismo formateado en 
+consola, usando el formateo la clase anterior construida.
+
+202- Escribir un programa que deje ingresar por consola valores en palabras que representan colores.
+Estos valores ingresados se deberán verificar si son parte de colores válidos para nuestro programa. 
+La validación se hará buscando el valor ingresado en una lista de colores, y para armar esta lista, se 
+deberá leer el contenido de un archivo de texto. En ese archivo, cada valor de color debe ser una linea 
+de texto del archivo. Terminar el proceso ingresando asterisco.   
+Negro azul marrón gris verde naranja rosa púrpura rojo blanco amarillo turquesa verde oliva verde menta borgoña lavandamagenta salmón cian beige rosado verde oscuro verde oliva lila amarillo pálido fucsia mostaza
+
+203 - Realizar una clase que tenga como atributos una cola y tres listas. Se deberá poder ingresar 
+datos de tipo números enteros en la cola. Además deberá tener un método llamada procesarEntrada, 
+que deberá armar con los datos de la cola, tres listas que respeten el orden de llegada de los datos a 
+la cola, es decir, la primer lista empieza con el primer elemento de la cola, la segunda lista con el 
+segundo elemento de la cola, la tercer lista con el tercero de la cola, y así continuando hasta vaciar la 
+cola. Se deberá poder imprimir la entrada y las tres salidas para verificar.
+
+204 - Realizar un programa que deje ingresar palabras desde consola, y la lista de ingresos debe 
+guardarse en un objeto ArrayList, el fin del ingreso se hace con un asterisco. Luego implementar un 
+método que haga lo siguiente:
+a. recorrer el ArrayList y colocar todos los elementos en un objeto Stack (pila).
+b. recorrer el objeto Stack, y sacar de la pila uno a uno los elementos, e imprimirlos en pantalla.
+c. Responder, cual es el orden de la impresión de salida respecto a la entrada ?
+
+205 - Realizar un programa en lenguaje java que contenga una clase, aparte de la principal, que 
+implemente un pedido de entrada de texto desde consola. Las entradas de texto pedidas corresponden
+a un nombre, una edad, y un domicilio, que consta de calle y altura en dos campos separados. 
+Implementar un método que verifique las entradas numéricas de edad y altura, intentando convertir a 
+número Integer lo ingresado. Cuando los cuatro datos ingresados estén correctos en formato, imprimir 
+en pantalla lo ingresado. Si lo ingresado tiene formato incorrecto, no se deberá cerrar el programa, 
+sino avisar al usuario, y volver a pedir el dato. Como opcional, implementar que si se ingresa asterisco 
+en cualquier campo, se salga de la aplicación. Usar manejo de excepciones para verificar el formato de
+los campos tipo número a ingresar.
+
+206 - Realizar un programa que genere un ArrayList con 25 elementos, y cada elemento será un 
+número aleatorios entre 1 y 1000. Luego recorrer el ArrayList, y escribir los 25 elementos a un archivo 
+de texto, un elemento por linea. Antes de salir del programa, informar el nombre y ruta del archivo 
+donde se escribió la información.
