@@ -1,0 +1,33 @@
+public class Ejercicio {
+
+    public void menu(){
+        
+        ArrayList<Integer> entradas = new ArrayList();
+        ArrayList<Integer> pares = new ArrayList();
+        ArrayList<Integer> impares = new ArrayList();
+        
+        System.out.println("Ingrese ocho numeros");
+        
+        for (int i = 0; i < 8; i++) {
+            Scanner sc = new Scanner(System.in);
+            int numero = sc.nextInt();
+            entradas.add(numero);
+        }
+        
+        for (Integer elemento: entradas) {
+            
+            if (elemento%2 == 0) {
+                pares.add(elemento);
+            } else {
+                impares.add(elemento);
+            }
+         
+        }
+        
+        System.out.println("Entradas: " + entradas.toString());
+        System.out.println("Pares: " + pares.toString());
+        System.out.println("Impares: " + impares.toString());        
+        
+    }
+    
+    
