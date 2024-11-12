@@ -1,0 +1,43 @@
+   public void menu() {
+    
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese un numero de 1 a 12");
+        int numero = sc.nextInt();      
+        
+        int dias = this.cantidadDias(numero);
+        String nombreMes = this.nombreMes(numero);
+        System.out.println("El mes " + nombreMes + " tiene " + dias + " dias");
+    }
+    
+    
+    
+    public int cantidadDias(int nMes){
+
+        int []cant = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};        
+        int indiceReal = nMes-1;
+        int cantidad = cant[indiceReal];       
+
+        return cantidad;
+    }
+    
+    public String nombreMes(int nMes){
+        
+        String salida = "";
+        String []nombres = new String[12];
+        nombres[0] = "enero";
+        nombres[1] = "febrero";               
+        nombres[2] = "marzo";            
+        nombres[3] = "abril";
+        nombres[4] = "mayo";
+        nombres[5] = "junio";
+        nombres[6] = "julio";
+        nombres[7] = "agosto";
+        nombres[8] = "septiembre";
+        nombres[9] = "octubre";
+        nombres[10] = "noviembre";
+        nombres[11] = "diciembre";       
+        
+        int indiceReal = nMes - 1;
+        salida = nombres[indiceReal];
+        return salida;
+    }
