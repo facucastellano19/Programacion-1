@@ -1,4 +1,4 @@
-// Luca Ferrante
+
 package ejercicio304;
 
 public abstract class Ejercicio {
