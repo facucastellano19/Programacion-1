@@ -5,6 +5,13 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+//203 - Realizar una clase que tenga como atributos una cola y tres listas. Se deberá poder ingresar 
+//datos de tipo números enteros en la cola. Además deberá tener un método llamada procesarEntrada, 
+//que deberá armar con los datos de la cola, tres listas que respeten el orden de llegada de los datos a 
+//la cola, es decir, la primer lista empieza con el primer elemento de la cola, la segunda lista con el 
+//segundo elemento de la cola, la tercer lista con el tercero de la cola, y así continuando hasta vaciar la 
+//cola. Se deberá poder imprimir la entrada y las tres salidas para verificar.
+    
 public class ProcesadorNumeros {
 
     private Queue<Integer> cola = new LinkedList<>();
