@@ -8,26 +8,28 @@ import java.util.InputMismatchException;
 //para guardar la información y recuperarla.
 
 public class Ejercicio {
-    Scanner entrada = new Scanner(System.in);
-    enum Dias {Domingo, Lunes, Martes, Miercoles, Jueves, Viernes, Sabado};
-    int numingresado;
     
     public void procesoTotal() {
+        Scanner entrada = new Scanner(System.in);
+        enum Dias {Domingo, Lunes, Martes, Miercoles, Jueves, Viernes, Sabado};
+        int numingresado;
+
         try {
             System.out.println("Ingresar numero del 1 al 7: ");
             numingresado = entrada.nextInt();
             
             if (numingresado >= 1 && numingresado <= 7) {
                 Dias dia = Dias.values()[numingresado - 1];
-                System.out.println("Dia: " + dia);
+                System.out.println("Día: " + dia.toString().toLowerCase());  // Imprime el nombre del día en minúsculas
             }
             else {
-                System.out.println("Numero invalido.");
+                System.out.println("Número inválido. Ingrese un número entre 1 y 7.");
             }
         }
         catch (InputMismatchException e) {
-            System.out.println("Error. Ingresa un numero entero.");
-            e.printStackTrace();
+            System.out.println("Error. Ingresa un número entero.");
+        } finally {
+            entrada.close();  // Cierra el scanner para evitar fuga de recursos
         }
     }
 }
