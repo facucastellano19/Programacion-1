@@ -1,0 +1,24 @@
+    public static void main(String[] args) {
+        /*F002- Realizar un programa que pida la entrada de un String que sea un color, y repetir la entrada cuatro veces, 
+        guardando lo ingresado en un objeto ArrayList. Luego pedir la entrada de dos colores más, los cuales deben insertarse como 
+        primero y último elemento en el ArrayList anterior. Mostrar luego en pantalla el contenido del ArrayList complet
+        */
+        Scanner sc = new Scanner (System.in);
+        ArrayList <String> lista1 = new ArrayList();
+        for (int i = 0; i < 4; i++) {
+            System.out.println("Ingresa un color");
+            String color = sc.nextLine();
+            lista1.add(color);
+        }        
+            System.out.println("Ingresa otro color");
+            String color1 = sc.nextLine();
+            lista1.set(0, color1);
+            System.out.println("Ingresa otro color");
+            String color2 = sc.nextLine();
+            lista1.set(3, color2);        
+        System.out.println("");
+        Iterator it = lista1.iterator();
+        while(it.hasNext()){
+            System.out.println(it.next());
+        }
+    }
