@@ -1,0 +1,32 @@
+CLASES QUEUE, STACK Y LIST JAVA
+QUEUE: Queue<String> queue = new LinkedList<>();
+ 
+isEmpty() VACIO
+size() TAMAÑO
+peek() DEVUELVE EL ELEMENTO AL FRENTE SIN QUITARLO
+poll() QUITA Y DEVUELVE EL ELEMENTE AL FRRENTE DE LA COLA
+offer() o enqueue() AGREGA ELEMENTO AL FINAL DE LA COLA
+ 
+STACK (pila)  Stack<Integer> stack = new Stack<>();
+isEmpty():
+size()
+push(Tipo elemento): permiten agregar elementos en la parte superior
+peek():  ver el elemento en la parte superior sin quitarlo
+pop(): permiten eliminar y devolver el elemento en la parte superior
+ 
+LIST  List<String> list = new ArrayList<>();
+IsEmpty()
+size():
+get(int index) Devuelve el elemento en la posición especificada. 
+No hay métodos getFirst() y getLast() COMO EN LA LISTA QUE CREAMOS, pero en List puedes usar get(0) y get(size() - 1).
+No tiene un método específico para agregar al principio, pero puedes implementar esto usando add(0, elemento) en una implementación de List
+No hay métodos removeFirst() y removeLast(), pero puedes usar remove(0) y remove(size() - 1).
+add(Tipo elemento) en List, que agrega un elemento al final.
+add(int index, Tipo element) 
+remove(int index)
+ 
+ 
+ 
+ 
+ 
+ 
