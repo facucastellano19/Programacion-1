@@ -1,4 +1,4 @@
-// Luca Ferrante
+
 package ejercicio302;
 import java.util.Scanner;
 import java.util.Calendar;
@@ -7,6 +7,11 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
+
+//302 – Realizar un programa en lenguaje java para el cálculo de la cantidad de días que restan hasta su
+//próximo cumpleaños. El programa debe pedir el ingreso de la fecha de su próximo cumpleaños (como 
+//un String), y hacer el calculo respecto a la fecha actual. Usar para el cálculo clases java que manejan 
+//fechas.
 
 public class Ejercicio {
     
