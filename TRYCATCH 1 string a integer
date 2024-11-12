@@ -1,0 +1,47 @@
+package excepciones;
+
+import java.util.Scanner;
+
+
+public class Ejercicio {
+    
+    /*
+    Lee un numero, si no es un numero se repite el ciclo hasta que ingreses un num
+    Modificar el programa de esta forma:
+    1- El tipo de variable a leer debe ser String
+    2- El programa debe mostrar el cuadrado del numero ingresado
+    
+    
+    */
+    public void menu(){
+        
+        Scanner sc = new Scanner(System.in);
+        
+        
+        
+        String numeroCapturado = "";
+
+        
+        do {
+            try{
+                System.out.println("Ingresa un numero: ");
+                numeroCapturado = sc.nextLine();
+                Integer numeroConvertido = Integer.parseInt(numeroCapturado);
+                Integer cuadrado = numeroConvertido * numeroConvertido;
+                
+                System.out.println("El numero ingresado es: " + numeroConvertido);
+                System.out.println("El numero al cuadrado es: " + cuadrado);
+                break;
+            } catch(Exception e) {
+                System.out.println();
+                System.out.println("Solo se permiten numeros");
+                System.out.println("Vuelva a intentar");
+                System.out.println();
+            }
+
+        } while(true);    
+        
+        
+        
+    }
+}
