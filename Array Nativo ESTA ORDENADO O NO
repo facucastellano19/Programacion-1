@@ -1,0 +1,36 @@
+package e010;
+
+import java.util.Scanner;
+
+public class Menu {
+
+    public void menu() {
+        Scanner sc = new Scanner(System.in);
+        int numeros[] = new int[5];
+
+        System.out.println("Ingresar 5 numeros");
+        for (int i = 0; i < 5; i++) {
+            int num = sc.nextInt();
+            numeros[i] = num;
+        }
+
+        boolean ordenado = estaOrdenado(numeros);
+        System.out.println("Esta ordenado?: " + ordenado);
+
+    }
+
+    public boolean estaOrdenado(int array[]) {
+
+        boolean estaOrdenado = true;
+
+        for (int i = 0; i < array.length - 1; i++) {
+            if (array[i] > array[i + 1]) {
+                estaOrdenado = false;
+                break;
+            } 
+
+        }
+        return estaOrdenado;
+    }
+
+}
