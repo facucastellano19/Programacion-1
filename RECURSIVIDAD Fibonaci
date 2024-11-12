@@ -17,3 +17,30 @@ public class fibonaci {
     }
 
 }
+
+
+
+//La sucesión de Fibonacci es una serie de números donde cada término es la suma de los dos anteriores, comenzando con 0 y 1. Ejemplo: 0,1,1,2,3,5,8,13
+
+//Ejemplo calcula_fibonaci(4)
+//Llama a: calcula_fibonaci(3) + calcula_fibonaci(2)
+
+//calcula_fibonaci(3)
+//Llama a: calcula_fibonaci(2) + calcula_fibonaci(1)
+
+//calcula_fibonaci(2)
+//Llama a: calcula_fibonaci(1) + calcula_fibonaci(0)
+
+//calcula_fibonaci(1)
+//Devuelve: 1 (caso base)
+
+//calcula_fibonaci(0)
+//Devuelve: 0 (caso base)
+
+//Luego, se resuelven las sumas:
+
+//calcula_fibonaci(2) = 1 + 0 = 1
+//calcula_fibonaci(3) = 1 + 1 = 2
+//calcula_fibonaci(4) = 2 + 1 = 3
+//Resultado final:
+//calcula_fibonaci(4)=3
