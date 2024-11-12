@@ -29,7 +29,7 @@ public class ProcesoColores {
             Scanner sc = new Scanner(archivo);
 
             while (sc.hasNextLine()) {
-                String color = sc.nextLine().trim().toLowerCase();
+                String color = sc.nextLine().trim().toLowerCase(); // El método trim() se utiliza para eliminar los espacios en blanco al principio y al final de una cadena. En el contexto que muestras:
                 coloresValidos.add(color);
             }
 
