@@ -1,0 +1,25 @@
+package demo_recursividad4;
+
+import java.util.Scanner;
+
+public class orden_inverso {
+
+    public void imp_OrdenInverso(int n) {
+
+        Scanner teclado = new Scanner(System.in);
+        
+        String palabra;
+        if (n == 1) {
+            palabra = teclado.nextLine();
+            System.out.println(palabra);
+        } else {
+            palabra = teclado.nextLine();
+            imp_OrdenInverso(n - 1);
+            System.out.println(palabra);
+        }
+    }
+
+}
+
+// Este método imprime n palabras en orden inverso usando recursividad. Lee una palabra, llama al método con n-1, y luego la imprime.
+// ej Entrada: "Hola", "Mundo", "Java", salida: Java Mundo Hola
