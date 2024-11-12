@@ -1,0 +1,88 @@
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Cuit_2024 cuit = new Cuit_2024();
+        System.out.println("Ingrese un cuit: ");
+        String nuevo = sc.nextLine();
+        
+        
+        
+        cuit.setCuit(nuevo);
+        
+        String valor = cuit.getCuitFormato();
+        String valorV2 = cuit.getCuitFormatoV2();
+        
+        System.out.println("Cuit v1: " + valor);
+        System.out.println("Cuit v2: " + valorV2);
+
+
+------------------------------------------------------------------------------------------
+package demo_cuit;
+
+
+public class Cuit_2024 {
+    
+    private String cuit;
+    private int LARGO_CUIT = 11;
+    private boolean isValid = false;
+    
+    
+    public String getCuitFormato(){      
+        
+        
+        String formato = "";  
+        
+        if (!this.isValid) {
+            return formato;
+        }
+        
+        String elCuit = this.cuit;
+        formato = elCuit.substring(0, 2).concat("-").concat(elCuit.substring(2, 10).concat("-").concat(elCuit.substring(10)));
+        
+        
+        return formato;    
+    }
+    
+    public String getCuitFormatoV2(){      
+        String formato = "";    
+        
+        if (!this.isValid) {
+            return formato;
+        }
+        
+        StringBuffer sb = new StringBuffer();
+        
+        String elCuit = this.cuit;
+        
+        sb.append(elCuit.substring(0, 2));
+        sb.append("-");
+        sb.append(elCuit.substring(2, 10));
+        sb.append("-");
+        sb.append(elCuit.substring(10));
+        
+        formato = sb.toString();
+        
+        return formato;    
+    }    
+    
+    
+    
+    public void setCuit(String nuevo_cuit){
+        
+        this.cuit = "";
+        
+        if (nuevo_cuit.length() != this.LARGO_CUIT) {
+            System.out.println("Largo de dato es incorrecto!");
+            return;
+        }
+        
+        this.cuit = nuevo_cuit;    
+        this.isValid = true;
+    }
+    
+    public String getCuit(){
+        return this.cuit;
+    }
+    
+    
+}
