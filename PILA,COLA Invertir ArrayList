@@ -1,0 +1,66 @@
+package demo_pila;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Stack;
+
+public class Ejercicio {
+
+    public void menu() {
+
+        Scanner sc = new Scanner(System.in);
+        ArrayList<String> valores = new ArrayList();
+        int cuenta = 0;
+        System.out.println("Ingrese 10 datos de texto: ");
+
+        while (cuenta < 10) {
+            String nuevo = sc.nextLine();
+            valores.add(nuevo);
+            cuenta++;
+        }
+        System.out.println("Array Original");
+        System.out.println(valores.toString());
+        System.out.println("");
+        System.out.println("Array Invertido con Stack");
+        this.invierte_orden(valores);
+        this.nuevo_orden(valores);
+
+    }
+
+    public void invierte_orden(ArrayList<String> array) {
+        Stack<String> st1 = new Stack();
+
+        // Recorrer el ArrayList y lo agregamos a Stack
+        for (String ele : array) {
+            st1.push(ele);
+        }
+
+        // Mostramos los datos invertidos del ArrayList
+        while (!st1.isEmpty()) {
+            String dato = st1.pop();
+            System.out.println(dato);
+        }
+
+    }
+
+    public void nuevo_orden(ArrayList<String> ar1) {
+        
+        Queue <String> queue = new LinkedList<>();
+        
+        for(String ele : ar1){
+            
+            System.out.println("Ingresa : " + ele);
+            queue.add(ele);
+        }
+        
+        while (!queue.isEmpty()) {
+            String dato = queue.poll();
+            System.out.println(dato);
+        }        
+        
+        
+    }
+
+}
